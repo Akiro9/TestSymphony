@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head> <title> Welcome to Blogs </title> </head>
+
+<body> 
+<h1> Posts List </h1>
+
+{% for message in app.flashes('notice') %}
+
+<div class="flash-notice">
+{{ message }}
+</div>
+{% endfor %}
+
+<ul id="navigation" > 
+
+{% for car in cars %}
+
+<li><h1> {{car.brand}} </h1> <p> {{ car.model }} </p></li>
+
+{% endfor %}
+
+ </ul>
+
+</body>
+
+</html>
